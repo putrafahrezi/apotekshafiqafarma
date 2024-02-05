@@ -36,11 +36,11 @@ include_once("cek_login.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Jurusan</h1>
+            
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               <li class="breadcrumb-item active">Blank Page</li>
             </ol>
           </div>
@@ -56,10 +56,10 @@ include_once("cek_login.php");
 <div class="container">
     <div class="row">
         <div class="col-md-9 m-auto mt-5">
-          <a class="btn btn-outline-success mb-1" href="form.php">Tambah Data </a>
+          <a class="btn btn-outline-success mb-1" href="tambah_pasien.php">Tambah Data Pasien </a>
             <div class="card">
             <div class="card-header">
-        BIODATA MAHASISWA
+        BIODATA PASIEN
         <br>
         </div>
         <div class="card-body">
@@ -67,9 +67,9 @@ include_once("cek_login.php");
   <thead>
     <tr>
       <th scope="col">NO</th>
-      <th scope="col">NIM</th>
-      <th scope="col">NAMA</th>
-      <th scope="col">JURUSAN</th>
+      <th scope="col">NIP</th>
+      <th scope="col">NAMA PASIEN</th>
+      <th scope="col">PENYAKIT</th>
       <th scope="col">DETAIL</th>
       <th scope="col">ACTION</th>
     </tr>
@@ -80,7 +80,7 @@ include_once("cek_login.php");
     include_once("koneksi.php");
 
     //2. membuat query untuk menampilakn seluruh data dari table
-    $qry = "SELECT * FROM shafiqa";
+    $qry = "SELECT * FROM pasien";
 
     //3.  menjalankan query
     $tampil = mysqli_query($con,$qry);
@@ -91,9 +91,9 @@ include_once("cek_login.php");
     ?>
     <tr>
       <th scope="row"><?php echo $nomor++ ?></th>
-      <td><?php echo $data['nim'] ?></td>
-      <td><?php echo $data['nama_mahasiswa'] ?></td>
-      <td><?php echo $data['jurusan'] ?></td>
+      <td><?php echo $data['nip'] ?></td>
+      <td><?php echo $data['nama_pasien'] ?></td>
+      <td><?php echo $data['penyakit'] ?></td>
       <td><button class="btn btn-warning btn-sm">lihat</button></td>
       <td><button class="btn btn-sucsess btn-sm">edit</button></td>
       <td><button class="btn btn-danger btn-sm">hapus</button></td>

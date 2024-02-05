@@ -36,16 +36,16 @@ include_once("cek_login.php");
               //koneksi
               include_once("koneksi.php");
               //sql query
-              $sql_jur = "SELECT * FROM jurusan";
+              $sql_pas = "SELECT * FROM pasien";
               //jalankan query
-              $result_jur = mysqli_query($con,$sql_jur);
+              $result_pas = mysqli_query($con,$sql_pas);
               //hitung record data
-              $jur = mysqli_num_rows($result_jur);
+              $pas = mysqli_num_rows($result_pas);
             ?>
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><?php echo $jur ?></h3>
+                <h3><?php echo $pas ?></h3>
 
                 <p>Jurusan</p>
               </div>
