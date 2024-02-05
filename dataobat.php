@@ -36,11 +36,11 @@ include_once("cek_login.php");
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Jurusan</h1>
+            
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               <li class="breadcrumb-item active">Blank Page</li>
             </ol>
           </div>
@@ -52,55 +52,72 @@ include_once("cek_login.php");
     <section class="content">
 
       <!-- Default box -->
-      <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>No</th>
-                    <th>Kode</th>
-                    <th>Jurusan</th>
-                    <th>Aksi</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <?php
-                    //1. membuat koneksi
-                    include_once("koneksi.php");
-                    //2. membuat query untuk menampilkan seluruh data
-                    $qry = "SELECT * FROM jurusan";
-                    //3. menjalankan query
-                    $tampil = mysqli_query($con,$qry);
-                    //4. menampilkan data menggunakan looping foreach
-                    $nomor = 1;
-                    foreach($tampil as $data){
-                    ?>
-                  <tr>
-                    <td><?php echo $nomor++ ?></td>
-                    <td><?php echo $data['kode'] ?></td>
-                    <td><?php echo $data['jurusan'] ?></td>
-                    <td> 4</td>
-                  </tr>
-                  <?php
-                    }
-                    ?>
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                  <th>No</th>
-                    <th>Kode</th>
-                    <th>Jurusan</th>
-                    <th>Aksi</th>
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 m-auto mt-5">
+          <a class="btn btn-outline-success mb-1" href="tambah_obat.php">Tambah Data Obat </a>
+            <div class="card">
+            <div class="card-header">
+        BIODATA PASIEN
+        <br>
+        </div>
+        <div class="card-body">
+        <table class="table table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col">NO</th>
+      <th scope="col">KODE OBAT</th>
+      <th scope="col">NAMA OBAT</th>
+      <th scope="col">STOK AWAL</th>
+      <th scope="col">STOK AKHIR</th>
+      <th scope="col">DETAIL</th>
+      <th scope="col">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php
+    //1. membuat koneksi
+    include_once("koneksi.php");
+
+    //2. membuat query untuk menampilakn seluruh data dari table
+    $qry = "SELECT * FROM obat";
+
+    //3.  menjalankan query
+    $tampil = mysqli_query($con,$qry);
+
+    //4. menampilkan data menggunakan looping foreach
+    $nomor = 1;
+    foreach($tampil as $data){
+    ?>
+    <tr>
+      <th scope="row"><?php echo $nomor++ ?></th>
+      <td><?php echo $data['kd_obat'] ?></td>
+      <td><?php echo $data['nama_obat'] ?></td>
+      <td><?php echo $data['stok_awal'] ?></td>
+      <td><?php echo $data['stok_akhir'] ?></td>
+      <td><button class="btn btn-warning btn-sm">lihat</button></td>
+      <td><button class="btn btn-sucsess btn-sm">edit</button></td>
+      <td><button class="btn btn-danger btn-sm">hapus</button></td>
+    </tr>
+    <?php
+    }
+    ?>
+  </tbody>
+</table>
             </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- mulai card -->
+
+
+<!-- akhir card -->
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
       <!-- /.card -->
 
     </section>
@@ -108,7 +125,7 @@ include_once("cek_login.php");
   </div>
   <!-- /.content-wrapper -->
 
-  <?php include_once('footer.php')?>
+  <!-- <?php include_once('footer.php')?> -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

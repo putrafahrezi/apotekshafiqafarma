@@ -69,6 +69,7 @@ include_once("cek_login.php");
       <th scope="col">NO</th>
       <th scope="col">NIP</th>
       <th scope="col">NAMA PASIEN</th>
+      <th scope="col">JENIS KELAMIN</th>
       <th scope="col">PENYAKIT</th>
       <th scope="col">DETAIL</th>
       <th scope="col">ACTION</th>
@@ -93,6 +94,7 @@ include_once("cek_login.php");
       <th scope="row"><?php echo $nomor++ ?></th>
       <td><?php echo $data['nip'] ?></td>
       <td><?php echo $data['nama_pasien'] ?></td>
+      <td><?php echo $data['jenis_kelamin'] ?></td>
       <td><?php echo $data['penyakit'] ?></td>
       <td><button class="btn btn-warning btn-sm">lihat</button></td>
       <td><button class="btn btn-sucsess btn-sm">edit</button></td>
