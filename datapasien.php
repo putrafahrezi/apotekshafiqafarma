@@ -123,7 +123,7 @@ include_once("cek_login.php");
   </div>
   <!-- /.content-wrapper -->
 
-  <?php include_once('footer.php')?>
+  <!-- <?php include_once('footer.php')?> -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

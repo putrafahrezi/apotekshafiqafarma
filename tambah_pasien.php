@@ -61,7 +61,7 @@ include_once("cek_login.php");
         <br>
         </div>
         <div class="card-body">
-        <form action="proses_form.php" method="POST">
+        <form action="proses_pasien.php" method="POST">
             <div class="mb-3">
                 <label for="exampleInputnim" class="form-label">Nomor Induk Pasien</label>
                 <input type="nip" name="nip" class="form-control" id="exampleInputnim">
