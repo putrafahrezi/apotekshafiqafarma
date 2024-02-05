@@ -82,17 +82,27 @@ include_once("cek_login.php");
           </div>
           <!-- ./col -->
           <div class="col-lg-4 col-6">
+          <?php
+              //koneksi
+              include_once("koneksi.php");
+              //sql query
+              $sql_ptg = "SELECT * FROM petugas";
+              //jalankan query
+              $result_ptg = mysqli_query($con,$sql_ptg);
+              //hitung record data
+              $ptg = mysqli_num_rows($result_ptg);
+            ?>
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+              <h3><?php echo $ptg ?></h3>
 
-                <p>User Registrations</p>
+                <p>JUMLAH PETUGAS</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="datapetugas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

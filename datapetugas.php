@@ -56,10 +56,10 @@ include_once("cek_login.php");
 <div class="container">
     <div class="row">
         <div class="col-md-9 m-auto mt-5">
-          <a class="btn btn-outline-success mb-1" href="tambah_obat.php">Tambah Data Obat </a>
+          <a class="btn btn-outline-success mb-1" href="tambah_petugas.php">Tambah Data Petugas </a>
             <div class="card">
             <div class="card-header">
-        BIODATA OBAT
+        BIODATA PETUGAS
         <br>
         </div>
         <div class="card-body">
@@ -67,10 +67,10 @@ include_once("cek_login.php");
   <thead>
     <tr>
       <th scope="col">NO</th>
-      <th scope="col">KODE OBAT</th>
-      <th scope="col">NAMA OBAT</th>
-      <th scope="col">STOK AWAL</th>
-      <th scope="col">STOK AKHIR</th>
+      <th scope="col">KODE PETUGAS</th>
+      <th scope="col">NAMA PETUGAS</th>
+      <th scope="col">UMUR</th>
+      <th scope="col">TELEPON</th>
       <th scope="col">DETAIL</th>
       <th scope="col">ACTION</th>
     </tr>
@@ -81,7 +81,7 @@ include_once("cek_login.php");
     include_once("koneksi.php");
 
     //2. membuat query untuk menampilakn seluruh data dari table
-    $qry = "SELECT * FROM obat";
+    $qry = "SELECT * FROM petugas";
 
     //3.  menjalankan query
     $tampil = mysqli_query($con,$qry);
@@ -92,10 +92,10 @@ include_once("cek_login.php");
     ?>
     <tr>
       <th scope="row"><?php echo $nomor++ ?></th>
-      <td><?php echo $data['kd_obat'] ?></td>
-      <td><?php echo $data['nama_obat'] ?></td>
-      <td><?php echo $data['stok_awal'] ?></td>
-      <td><?php echo $data['stok_akhir'] ?></td>
+      <td><?php echo $data['kd_petugas'] ?></td>
+      <td><?php echo $data['nm_petugas'] ?></td>
+      <td><?php echo $data['umur'] ?></td>
+      <td><?php echo $data['no_hp'] ?></td>
       <td><button class="btn btn-warning btn-sm">lihat</button></td>
       <td><button class="btn btn-sucsess btn-sm">edit</button></td>
       <td><button class="btn btn-danger btn-sm">hapus</button></td>

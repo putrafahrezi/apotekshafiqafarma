@@ -52,7 +52,7 @@
               </p>
             </a>
             <li class="nav-item">
-            <a href="dataobat.php" class="nav-link">
+            <a href="datapetugas.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 DATA PETUGAS 
