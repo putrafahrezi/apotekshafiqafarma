@@ -14,7 +14,7 @@
           <img src="dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">putra fahrezi</a>
+          <a href="#" class="d-block">PUTRA FAHREZI</a>
         </div>
       </div>
 
@@ -28,7 +28,7 @@
             <a href="index.php" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Dashboard
+                DASHBOARD
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -36,7 +36,7 @@
             <a href="datapasien.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                data pasien
+                DATA PASIEN
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right"></span>
               </p>
@@ -46,7 +46,16 @@
             <a href="dataobat.php" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
-                data obat 
+                DATA OBAT
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+            <li class="nav-item">
+            <a href="dataobat.php" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                DATA PETUGAS 
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right"></span>
               </p>
